@@ -3,7 +3,7 @@
 
 Це єдиний файл, який завантажується в PARCS як Solution File. PARCS надсилає
 воркерам лише його, тому KMP і розбиття на шматки скопійовані сюди з kmp.py
-і chunking.py, а не імпортуються (test_solver.py перевіряє, що копії збігаються).
+і chunking.py, а не імпортуються.
 
 Вхідний файл: перший рядок — зразок, другий — текст (як у data_generator.py).
 """
@@ -14,7 +14,7 @@ import time
 try:
     from Pyro4 import expose
 except ImportError:
-    # локально (тести, run_solver_local.py) Pyro4 може не бути — декоратор тоді нічого не робить
+    # локально Pyro4 може не бути — декоратор тоді нічого не робить
     def expose(func):
         return func
 
